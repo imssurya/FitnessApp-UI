@@ -8,27 +8,40 @@ class Fitness extends StatelessWidget {
         length: 3,
         child: Scaffold(
           appBar: AppBar(
+            elevation: 0,
+            backgroundColor: Colors.white,
             bottom: PreferredSize(
-              preferredSize: Size(35, 100),
+              preferredSize: Size(MediaQuery.of(context).size.width, 100),
               child: Container(
-                width: 350,
+                width: 400,
                 child: Padding(
                   padding: EdgeInsets.only(right: 100),
                   child: TabBar(
+                    indicatorColor: Colors.black,
+                    indicatorSize: TabBarIndicatorSize.label,
                     tabs: <Widget>[
-                      Text(
-                        'NEW',
-                        style: TextStyle(fontSize: 12),
+                      Container(
+                        padding: EdgeInsets.only(bottom: 10),
+                        child: Text(
+                          'NEW',
+                          style: TextStyle(fontSize: 12, color: Colors.black),
+                        ),
                       ),
-                      Text(
-                        'TRAINING',
-                        maxLines: 1,
-                        style: TextStyle(fontSize: 12),
+                      Container(
+                        padding: EdgeInsets.only(bottom: 10),
+                        child: Text(
+                          'TRAINING',
+                          maxLines: 1,
+                          style: TextStyle(fontSize: 12, color: Colors.black),
+                        ),
                       ),
-                      Text(
-                        'PLAN',
-                        style: TextStyle(fontSize: 12),
-                      ),
+                      Container(
+                        padding: EdgeInsets.only(bottom: 10),
+                        child: Text(
+                          'PLAN',
+                          style: TextStyle(fontSize: 12, color: Colors.black),
+                        ),
+                      )
                     ],
                   ),
                 ),
